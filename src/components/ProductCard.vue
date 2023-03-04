@@ -12,8 +12,11 @@ defineProps({
             {{ cardData.title }}
         </v-card-title>
         <v-card-text>
-            <v-img :src="cardData.images[0]" cover height="100%"></v-img>
+            <v-img :src="cardData.images[0]" cover></v-img>
+            <div class="mt-5">
+                <p class="mb-4"> ${{ cardData.price }} </p>
+                <p>{{ cardData.description }}</p>
+            </div>
         </v-card-text>
-        <p class="ma-5">{{ cardData.description }}</p>
     </v-card>
 </template>

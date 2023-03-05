@@ -5,7 +5,7 @@ import ProductCard from '../components/ProductCard.vue'
 const products = await useFetch('https://dummyjson.com/products')
 </script>
 <template>
-    <v-row v-if="products.length">
+    <v-row>
         <v-col 
         cols="12" 
         md="4"
@@ -15,5 +15,5 @@ const products = await useFetch('https://dummyjson.com/products')
         <product-card :card-data="product"/>
         </v-col>
     </v-row>
-    <span v-else>LOADING...</span>
+    
 </template>
